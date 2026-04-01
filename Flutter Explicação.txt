@@ -1,0 +1,50 @@
+1- TextEditingController -> Controla o valor de campos de texto (TextField), permitindo ler e escrever valores nos inputs programaticamente. EX: 
+	"TextEditingController txtNome = TextEditingController();"
+
+2- Scaffold() -> Estrutura básica de uma tela em Material Design: AppBar, corpo, botões flutuantes, drawers, etc.
+
+3- AppBar -> Barra superior da tela. EX:
+	"  appBar: AppBar( comandos ),"
+
+4- BackgroundColor / ForegroundColor -> Cor de fundo / Cor do texto e icones. EXs:
+	"backgroundColor: Colors.blueAccent,"
+        "foregroundColor: Colors.white,"
+
+5- Child() / Children() -> Um item dentro de outro / Varios itens dentro de outro. EXs:
+	"Container( child: Text("A") ),"
+	"Container( child: Column( children: [ Text("A"), Text("B"), ], ), )," //coluna
+	"Container( child: Row( children: [ Text("A"), Text("B"), ], ), )"     //linha
+
+6- SingleChildScrollView() -> Permite rolar a tela caso o conteúdo ultrapasse a altura da tela. Pode ser trocado por Column(), caso não queira rolagem de tela.
+
+7-  Column() / Row() -> Organiza os widgets verticalmente / Organiza os widgets horizontalmente.
+
+//===================================================================================================================
+
+8- TextField() -> Campo de entrada de texto.
+
+9- Controller -> Conecta o TextField a um TextEditingController. EX:
+	"controller: txtNome,"
+
+10.1- Decoration -> É uma propriedade do TextField que serve para personalizar a aparência do campo.
+10.2- InputDecoration() -> É um objeto que define o visual do TextField. Ele controla texto de dica, bordas, ícones, cores e mensagens de erro. É tipo um “pacote de configuração visual”.
+10.3- LabelText -> Define o texto do rótulo (label). Ele aparece dentro do campo quando você clica, ele sobe (animação). EXs:
+	" decoration: InputDecoration(labelText: "Idade:"),"
+
+//====================================================================================================================
+
+11.1- SizedBox() -> É um widget usado para definir tamanho (largura e/ou altura) de algo.
+11.2- Width -> Define a largura do SizedBox. EX: "width: double.infinity". Infinito pros lados
+11.3- Height -> Define a largura do SizedBox. EX: height: 50". 50
+
+12.1- FloatingActionButton() -> Botão flutuante estilo Material.
+12.2- OnPressed: () {} -> Função executada quando o botão é pressionado.
+
+13- String nome = txtNome.text; -> String nome = txtNome.text;
+
+14- SetState() -> Indica ao Flutter que o estado mudou, então a tela precisa ser re-renderizada. EX: 
+	"setState(() { resultado = "Nome: $nome, Sobrenome: $sobrenome, Idade: $idade"; });". Tudo que depender de resultado vai atualizar automaticamente na tela.
+
+15- Text() -> Texto. EXs: 
+	"child: Text("Carregar"),". Texto do botão.
+	"Text(resultado),". Widget Text que mostra a string armazenada em resultado. Sempre que setState() é chamado, esse widget atualiza com os novos dados."
